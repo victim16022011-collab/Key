@@ -159,8 +159,8 @@ TitleLabel.BackgroundTransparency = 1.000
 TitleLabel.Position = UDim2.new(0, 0, 0.05, 0)
 TitleLabel.Size = UDim2.new(1, 0, 0, 40)
 TitleLabel.Font = Enum.Font.FredokaOne
-TitleLabel.Text = "AMETHYST QUẢN LÝ TỐI THƯỢNG"
-TitleLabel.TextColor3 = Color3.fromRGB(0, 255, 255) 
+TitleLabel.Text = "AMETHYST HUB"
+TitleLabel.TextColor3 = Color3.fromRGB(255, 85, 255) 
 TitleLabel.TextSize = 36.000 
 TitleLabel.TextStrokeTransparency = 0.000 
 
@@ -224,7 +224,7 @@ getgenv().AutoFarm_Killer_V2 = false
 getgenv().AutoFarm_Level_V1 = true
 getgenv().AutoHop_V1 = true      
 getgenv().AutoHop_V2 = false     
-getgenv().AutoHop_TimeLimit = false 
+getgenv().AutoHop_TimeLimit = false
 getgenv().FixLagEnabled = false  
 getgenv().MusicEnabled = true
 getgenv().MusicVolumePercent = 60
@@ -232,6 +232,7 @@ getgenv().CurrentSongIndex = 1
 getgenv().AutoSave = true        
 getgenv().LanguageIndex = 1      
 
+-- [NEW STATE CHO CUSTOM NHẠC]
 getgenv().IsUsingCustomMusic = false
 getgenv().CustomMusicID = ""
 
@@ -342,7 +343,7 @@ SettingsFrame.ZIndex = 10
 SettingsCorner.CornerRadius = UDim.new(0, 16)
 SettingsCorner.Parent = SettingsFrame
 
-SettingsStroke.Color = Color3.fromRGB(0, 255, 255)
+SettingsStroke.Color = Color3.fromRGB(150, 0, 255)
 SettingsStroke.Thickness = 2.5
 SettingsStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 SettingsStroke.Transparency = 0.2
@@ -372,9 +373,9 @@ SettingsTitle.TextSize = 24.000
 SettingsTitle.ZIndex = 11
 
 SettingsTitleGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 255, 255)),
-    ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 200, 255)),
-    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 255))
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 255)),
+    ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 255, 255)),
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 255))
 }
 SettingsTitleGradient.Parent = SettingsTitle
 
@@ -414,7 +415,7 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.Position = UDim2.new(0, 0, 0, 70)
 ScrollingFrame.Size = UDim2.new(1, 0, 1, -80)
 ScrollingFrame.ScrollBarThickness = 4
-ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 255, 255)
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(150, 0, 255)
 ScrollingFrame.ZIndex = 11
 ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
 
@@ -474,7 +475,7 @@ local function CreateSectionHeader(id, text)
     local LineGradient = Instance.new("UIGradient")
     LineGradient.Color = ColorSequence.new{
         ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 255, 255)),
-        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 200, 255))
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(150, 0, 255))
     }
     LineGradient.Parent = Line
 end
@@ -521,7 +522,7 @@ local function CreateCyberpunkSettingRow(id, titleText, descText, initialState, 
     IconLabel.Size = UDim2.new(0, 40, 0, 40)
     IconLabel.Font = Enum.Font.GothamBlack
     IconLabel.Text = id
-    IconLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+    IconLabel.TextColor3 = Color3.fromRGB(0, 255, 200)
     IconLabel.TextSize = 28
     IconLabel.ZIndex = 12
 
@@ -601,7 +602,7 @@ local function CreateCyberpunkSettingRow(id, titleText, descText, initialState, 
     ClickButton.MouseEnter:Connect(function()
         PlaySound(HoverSound)
         TweenService:Create(RowScale, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {Scale = 1.02}):Play()
-        TweenService:Create(RowStroke, TweenInfo.new(0.2), {Color = Color3.fromRGB(0, 255, 255), Transparency = 0}):Play()
+        TweenService:Create(RowStroke, TweenInfo.new(0.2), {Color = Color3.fromRGB(150, 100, 255), Transparency = 0}):Play()
         TweenService:Create(RowFrame, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(35, 35, 45)}):Play()
     end)
     
@@ -820,7 +821,7 @@ local function CreateCyberpunkCycleRow(id, titleText, descText, list, initialInd
     CycleBtn.ZIndex = 13
     Instance.new("UICorner", CycleBtn).CornerRadius = UDim.new(0, 8)
     local CStroke = Instance.new("UIStroke", CycleBtn)
-    CStroke.Color = Color3.fromRGB(0, 255, 255)
+    CStroke.Color = Color3.fromRGB(150, 0, 255)
     CStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     CStroke.Thickness = 1.5
 
@@ -828,7 +829,7 @@ local function CreateCyberpunkCycleRow(id, titleText, descText, list, initialInd
 
     CycleBtn.MouseButton1Click:Connect(function()
         PlaySound(HoverSound)
-        TweenService:Create(CycleBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(0, 200, 200), TextSize = 11}):Play()
+        TweenService:Create(CycleBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(100, 50, 200), TextSize = 11}):Play()
         currentIndex = currentIndex + 1
         if currentIndex > #list then currentIndex = 1 end
         CycleBtn.Text = "▶ " .. list[currentIndex].Name
@@ -2011,7 +2012,7 @@ task.spawn(function()
                         if getgenv().AutoFarm and (getgenv().AutoFarm_V1 or getgenv().AutoFarm_V2) then
                             root.Anchored = false
                             if getgenv().AutoFarm_V2 then
-                                task.wait(0.75) -- [AUTO FARM V2.5 FREE]: Sửa lại còn 0.75 rời xuống rồi sửa máy
+                                task.wait(0.75) -- [AUTO FARM V2.5 FREE]: Rơi xuống 0.75s rồi sửa máy
                             else
                                 task.wait(1)
                                 root.Anchored = true 
@@ -2160,7 +2161,7 @@ task.spawn(function()
                                                     if distKillerToOldGen > 5 then 
                                                         break 
                                                     else 
-                                                        task.wait(0.2) 
+                                                        task.wait(0.1) 
                                                     end
                                                 until false
                                                 
@@ -2178,7 +2179,7 @@ task.spawn(function()
                                     end
                                 end
                                 
-                                local interactDelay = getgenv().AutoFarm_V2 and 0.75 or 1.1 -- [AUTO FARM V2.5 FREE]: Chỉnh thời gian sửa một vạch là 0.75s
+                                local interactDelay = getgenv().AutoFarm_V2 and 0.75 or 1.1 -- [AUTO FARM V2.5 FREE]: Sửa một vạch 0.75s
                                 if tick() - lastInteract >= interactDelay then
                                     if prompt then pcall(function() prompt:InputHoldBegin() end) end
                                     if gen:FindFirstChild("Remotes") and gen.Remotes:FindFirstChild("RE") then gen.Remotes.RE:FireServer() end
